@@ -1,0 +1,7 @@
+fastapi
+Jinja2
+numpy
+pandas
+python-multipart
+statsmodels
+uvicorn
