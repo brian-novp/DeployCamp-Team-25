@@ -2,8 +2,8 @@ name: Push to DockerHub
 
 on:
   push:
-    tags:
-      - '**'
+    branches:
+      - main
 
 jobs:
   build-and-deploy:
@@ -12,10 +12,6 @@ jobs:
     # checkout the repo
     - name: 'Checkout Github Action'
       uses: actions/checkout@master
-
-    - name: Get tag
-      id: tag
-      uses: dawidd6/action-get-tag@v1
 
     - name: login to docker registry
       uses: docker/login-action@v3
@@ -28,4 +24,26 @@ jobs:
       with:
         context: .
         push: true
-        tags: ${{secrets.DOCKERHUB_USERNAME}}/devcamp25:${{steps.tag.outputs.tag}}
+        tags: ${{secrets.DOCKERHUB_USERNAME}}/devcamp25:${{ github.sha }}
+
+    - name: replace docker-imgtag inside docker-compose.yaml
+      uses: jacobtomlinson/gha-find-replace@v3
+      with:
+        find: "docker-imgtag"
+        replace: ${{ github.sha }}
+
+    - name: Read user-script.sh
+      id: package
+      uses: juliangruber/read-file-action@v1
+      with:
+        path: ./docker-compose.yaml
+
+    # - name: scp docker-compose.yaml to biznet vm
+    #   uses: appleboy/scp-action@v1
+    #   with:
+    #     host: ${{ secrets.HOST }}
+    #     username: ${{ secrets.USERNAME }}
+    #     key: ${{ secrets.KEY }}
+    #     port: ${{ secrets.PORT }}
+    #     source: ./docker-compose.yaml
+    #     target: /home/debian/devcamp
