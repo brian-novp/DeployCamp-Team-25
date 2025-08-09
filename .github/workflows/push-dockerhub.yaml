@@ -38,6 +38,9 @@ jobs:
       with:
         path: ./docker-compose.yaml
 
+    - name: Echo user-script.sh
+      run: echo "${{ steps.package.outputs.content }}"
+
     # - name: scp docker-compose.yaml to biznet vm
     #   uses: appleboy/scp-action@v1
     #   with:
