@@ -10,7 +10,7 @@ import os
 app = FastAPI(title="Car Price Predictor")
 
 # Setup templates
-templates = Jinja2Templates(directory="../templates")
+templates = Jinja2Templates(directory="app/templates")
 
 # Load model
 MODEL_PATH = os.path.join(os.path.dirname(__file__), "lm_use_2nd.pkl")
