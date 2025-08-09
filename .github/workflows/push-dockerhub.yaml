@@ -57,4 +57,4 @@ jobs:
         port: ${{ secrets.PORT }}
         script: |
           cd devcamp
-          docker compose up -d
+          docker-compose up -d
