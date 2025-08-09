@@ -32,21 +32,29 @@ jobs:
         find: "docker-imgtag"
         replace: ${{ github.sha }}
 
-    - name: Read user-script.sh
+    - name: Read docker-compose.yaml
       id: package
       uses: juliangruber/read-file-action@v1
       with:
         path: ./docker-compose.yaml
 
-    - name: Echo user-script.sh
-      run: echo "${{ steps.package.outputs.content }}"
+    - name: scp docker-compose.yaml to biznet vm
+      uses: appleboy/scp-action@v1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        source: ./docker-compose.yaml
+        target: /home/debian/devcamp
 
-    # - name: scp docker-compose.yaml to biznet vm
-    #   uses: appleboy/scp-action@v1
-    #   with:
-    #     host: ${{ secrets.HOST }}
-    #     username: ${{ secrets.USERNAME }}
-    #     key: ${{ secrets.KEY }}
-    #     port: ${{ secrets.PORT }}
-    #     source: ./docker-compose.yaml
-    #     target: /home/debian/devcamp
+    - name: Execute remote SSH commands using SSH key
+      uses: appleboy/ssh-action@v1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        script: |
+          cd devcamp
+          docker compose up -d
