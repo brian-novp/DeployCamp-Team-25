@@ -36,12 +36,6 @@ jobs:
         find: "docker-imgtag"
         replace: ${{steps.tag.outputs.tag}}
 
-    - name: Read docker-compose.yaml
-      id: package
-      uses: juliangruber/read-file-action@v1
-      with:
-        path: ./docker-compose.yaml
-
     - name: scp docker-compose.yaml to biznet vm
       uses: appleboy/scp-action@v1
       with:
@@ -50,6 +44,16 @@ jobs:
         key: ${{ secrets.KEY }}
         port: ${{ secrets.PORT }}
         source: ./docker-compose.yaml
+        target: /home/debian/devcamp
+
+    - name: scp nginx.conf to biznet vm
+      uses: appleboy/scp-action@v1
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.KEY }}
+        port: ${{ secrets.PORT }}
+        source: ./nginx_conf/nginx.conf
         target: /home/debian/devcamp
 
     - name: Execute remote SSH commands using SSH key
