@@ -21,6 +21,8 @@ jobs:
           script: |
             if [ ${{ github.event.inputs.scale }} -eq 0 ]; then
               count=1
+            else
+              count=${{ github.event.inputs.scale }}
             fi
             cd devcamp
             echo "Scale the DevCamp Service deployment to $count"
