@@ -1,0 +1,28 @@
+name: Scale container up
+
+on:
+  workflow_dispatch:
+    inputs:
+      scale:
+        default: "1"
+        description: "Number of docker container replicas"
+        
+jobs:
+  scale-container-up:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Execute remote SSH commands using SSH key
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          key: ${{ secrets.KEY }}
+          port: ${{ secrets.PORT }}
+          script: |
+            if [ ${{ github.event.inputs.scale }} -eq 0 ]; then
+              count=1
+            fi
+            cd devcamp
+            docker compose scale devcamp=$count
+
+
