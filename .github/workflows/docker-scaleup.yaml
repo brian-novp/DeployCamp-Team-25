@@ -23,6 +23,7 @@ jobs:
               count=1
             fi
             cd devcamp
+            echo "Scale the DevCamp Service deployment to $count"
             docker compose scale devcamp=$count
 
 
