@@ -45,10 +45,10 @@ This project is intended for Geely internal-use only to be used by marketing, da
 1. Use above-mentioned factors as keywords in marketing or in designing the car
 2. Conduct further data collection to improve model
 
-# DEMO 
+# DEMO in YouTube
 [![DEMO Live Web App](https://img.youtube.com/vi/i-A-V_q7KHU/0.jpg)](https://www.youtube.com/watch?v=i-A-V_q7KHU)
 ## Live Web App
-This web app lifetime will be terminated in early September 2025
+This web app will be terminated in early September 2025
 
 ## Deployment
 Step-by-step process:
@@ -87,7 +87,4 @@ Log and error still can be only observed directly through docker logs inside the
 ## Team Collaboration Insights
 Team 25 emphasize on open dialogue and continuous coordination starting from defining business problem, model development and web-app deployment. We help each other to solve technical problems using each of our own expertise.
 
-
-private repo of team25 deploycamp
-SLIDE HERE
-https://docs.google.com/presentation/d/1_NQ5OA9zsNc8_GIWFv9xRdcuc4fw2ZlqQEprARMxJ3Q/edit?usp=sharing
+====================
