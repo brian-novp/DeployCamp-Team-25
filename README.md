@@ -52,7 +52,7 @@ This project is intended for Geely internal-use only to be used by marketing, da
 # DEMO
 https://github.com/user-attachments/assets/0abe112b-e8c7-4a17-a4c2-be741d4a50a0
 ## Live Web App
-This web app will be terminated in early September 2025
+This [webapp](http://103.150.90.211:8000) will be terminated in early September 2025
 
 ## Deployment
 Step-by-step process:
