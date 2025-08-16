@@ -49,10 +49,14 @@ This project is intended for Geely internal-use only to be used by marketing, da
 1. Use above-mentioned factors as keywords in marketing or in designing the car
 2. Conduct further data collection to improve model
 
-# DEMO in YouTube
-https://github.com/user-attachments/assets/fd2540e5-0267-4ab2-aa09-726f894a73b4
+# DEMO
+https://github.com/user-attachments/assets/0abe112b-e8c7-4a17-a4c2-be741d4a50a0
 ## Live Web App
-This web app will be terminated in early September 2025
+This web app will be te
+
+
+
+rminated in early September 2025
 
 ## Deployment
 Step-by-step process:
