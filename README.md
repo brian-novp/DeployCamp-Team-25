@@ -1,6 +1,10 @@
 # GEELY AUTO Car Price Prediction for Market Penetration
 ## Project Intro
-This project was submitted for Pelajar Data Deplyocamp course sponsored by Biznet Gio Cloud. We were provided with 3 different problems with 3 different dataset to be solved using machine learning from ingestion, model development to model deployment using Biznet Gio Cloud. For us, team 25, we pick regression dataset with car price prediction.
+This project was submitted for Pelajar Data Deplyocamp course sponsored by Biznet Gio Cloud. We were provided with 3 different problems with 3 different dataset to be solved using machine learning from ingestion, model development to model deployment using Biznet Gio Cloud. For us, team 25, we pick regression dataset with car price prediction. Team25 consist of:
++ Dwi Metaliana P (Machine Learning)
++ M. Bagus R. (DevOps)
++ Brian Prathama (Machine Learning)
+
 ## Problem Statement
 A Chinese automobile company Geely Auto aspires to enter the US market by setting up their manufacturing unit there and producing cars locally to give competition to their US and European counterparts. They have contracted an automobile consulting company to understand the factors on which the pricing of cars depends. Specifically, they want to understand the factors affecting the pricing of cars in the American market, since those may be very different from the Chinese market. The company wants to know:
 
@@ -69,7 +73,7 @@ Step-by-step process:
 ## Maintainability Practice
 Log and error still can be only observed directly through docker logs inside the vm
 
-# Outro
+# Outro / What did we learned?
 ## Technical Challenges
 - Making regression model based on classical linear assumption without adding interaction terms or any other transformation, is challenging.
 - Researching interpretable model for business and interpret it to make informed decision is challenging (natural vs log-log)
@@ -87,4 +91,3 @@ Log and error still can be only observed directly through docker logs inside the
 ## Team Collaboration Insights
 Team 25 emphasize on open dialogue and continuous coordination starting from defining business problem, model development and web-app deployment. We help each other to solve technical problems using each of our own expertise.
 
-====================
