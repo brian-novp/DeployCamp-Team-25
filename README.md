@@ -12,7 +12,16 @@ Based on various market surveys, the consulting firm has gathered a large data s
 We are required to model the price of cars with the available independent variables. It will be used by the management to understand how exactly the prices vary with the independent variables. They can accordingly manipulate the design of the cars, the business strategy etc. to meet certain price levels. Further, the model will be a good way for management to understand the pricing dynamics of a new market. 
 
 # Disclaimer
-The dataset, modelling and deployment done here is for learning purpose only. Do not infer from this project.
+**The dataset, modelling and deployment done here is for learning purpose only. Do not infer from this project.**
+
+## Solution
+
++ Use Multiple Linear Regression as interpretable model
++ Use Recursive Feature Elimination with Cross Validation and Variance Inflation Factor to help reduce dimensionality and determine significant factors
++ Build a simple internal web-app for price prediction based on model for internal use
+
+# System Overview Diagram / Architecture
+![](https://github.com/brian-novp/dcampt25/blob/main/img/architecture%20diagram%20deploycamp%20team%2025.png)
 
 private repo of team25 deploycamp
 SLIDE HERE
