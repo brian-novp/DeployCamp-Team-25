@@ -1,4 +1,6 @@
 # GEELY AUTO Car Price Prediction for Market Penetration
+## Project Intro
+This project was submitted for Pelajar Data Deplyocamp course sponsored by Biznet Gio Cloud. We were provided with 3 different problems with 3 different dataset to be solved using machine learning from ingestion, model development to model deployment using Biznet Gio Cloud. For us, team 25, we pick regression dataset with car price prediction.
 ## Problem Statement
 A Chinese automobile company Geely Auto aspires to enter the US market by setting up their manufacturing unit there and producing cars locally to give competition to their US and European counterparts. They have contracted an automobile consulting company to understand the factors on which the pricing of cars depends. Specifically, they want to understand the factors affecting the pricing of cars in the American market, since those may be very different from the Chinese market. The company wants to know:
 
@@ -26,6 +28,8 @@ We are required to model the price of cars with the available independent variab
 ![](img/tech_stack_table.png)
 ## Functionality
 ![](img/functionality.png)
+## User Journey
+![](img/user_journey.png)
 
 # Executive Summary
 ## Purpose
@@ -42,7 +46,7 @@ This project is intended for Geely internal-use only to be used by marketing, da
 2. Conduct further data collection to improve model
 
 # DEMO 
-
+[![DEMO Live Web App](https://img.youtube.com/vi/i-A-V_q7KHU/0.jpg)](https://www.youtube.com/watch?v=i-A-V_q7KHU)
 ## Live Web App
 This web app lifetime will be terminated in early September 2025
 
