@@ -50,6 +50,43 @@ This project is intended for Geely internal-use only to be used by marketing, da
 ## Live Web App
 This web app lifetime will be terminated in early September 2025
 
+## Deployment
+Step-by-step process:
+1. Developer create new release tag
+2. New tag will trigger the pipeline
+3. Pipeline will create new docker image then push the docker image to hub.docker.com and tagged the image using GitHub repository release tag
+4. Replace tag inside docker compose to match the release tag
+5. SCP docker compose and nginx config to vm
+6. Remote exec docker compose command to deploy the docker compose services
+
+## Scalability Approach
+Step-by-step process:
+1. On github action page in Container scaler, developer need to run the pipeline manually by entering the number of replicas of the backend service
+2. Before applying the change, it will check the value of the input, if:
+3. The value is 0, it will set the replica count to 1
+4. Other than 0, it will scale the service according the input value
+
+## Maintainability Practice
+Log and error still can be only observed directly through docker logs inside the vm
+
+# Outro
+## Technical Challenges
+- Making regression model based on classical linear assumption without adding interaction terms or any other transformation, is challenging.
+- Researching interpretable model for business and interpret it to make informed decision is challenging (natural vs log-log)
+
+## Future Improvement
+1. Create automation pipeline from ingest data to a database and model deployment
+2. Create monitoring system for machine learning
+3. Create authorization for improved security
+
+## Technical Lesson
+1. Tinkering with model in jupyter notebook is only the start, not even half the journey
+2. Basic fullstack web development skill is needed to make such a simple web app
+3. DevOps skill is critical for automation deployment
+
+## Team Collaboration Insights
+Team 25 emphasize on open dialogue and continuous coordination starting from defining business problem, model development and web-app deployment. We help each other to solve technical problems using each of our own expertise.
+
 
 private repo of team25 deploycamp
 SLIDE HERE
