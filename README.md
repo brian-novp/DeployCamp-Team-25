@@ -52,11 +52,7 @@ This project is intended for Geely internal-use only to be used by marketing, da
 # DEMO
 https://github.com/user-attachments/assets/0abe112b-e8c7-4a17-a4c2-be741d4a50a0
 ## Live Web App
-This web app will be te
-
-
-
-rminated in early September 2025
+This web app will be terminated in early September 2025
 
 ## Deployment
 Step-by-step process:
@@ -89,10 +85,6 @@ Log and error still can be only observed directly through docker logs inside the
 
 ## Technical Lesson
 1. Tinkering with model in jupyter notebook is only the start, not even half the journey
-
-
-
-
 2. Basic fullstack web development skill is needed to make such a simple web app
 3. DevOps skill is critical for automation deployment
 
