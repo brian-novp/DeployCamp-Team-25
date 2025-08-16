@@ -23,9 +23,9 @@ We are required to model the price of cars with the available independent variab
 # System Overview Diagram / Architecture
 ![](https://github.com/brian-novp/dcampt25/blob/main/img/architecture%20diagram%20deploycamp%20team%2025.png)
 ## Tech Stack Table
-![](https://github.com/brian-novp/dcampt25/blob/main/img/tech%20stack%20table.png)
-## Functionality
 ![](img/tech_stack_table.png)
+## Functionality
+![](img/functionality.png)
 
 # Executive Summary
 ## Purpose
